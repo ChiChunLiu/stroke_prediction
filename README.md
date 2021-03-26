@@ -1,15 +1,23 @@
 # stroke_prediction
 
-Demo: http://18.222.138.198:8501
+Streamlit demo: http://18.222.138.198:8501
 
-Build the docker image:
+## For the streamlit app 
+1. Build the docker image
 ```
 docker image build -t stroke_api .
 ```
-Run the container:
+2. Run the container
 ```
 docker container run -p 8501:8501 -d stroke_api
 ```
 
-Snapshot:
-![Demo interface](fig_streamlit.png)
+![Streamlit snapshot](fig_streamlit.png)
+
+## For the flask backend
+1. Clone this repository
+2. Start your MongoDB locally
+3. Play with it using Postman etc. Using POST requests, You can 
+  - Register for an account
+  - Predict stroke status
+  - Retrive prediction records of an account
