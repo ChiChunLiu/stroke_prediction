@@ -9,4 +9,4 @@ Run the container:
 docker container run -p 8501:8501 -d stroke_api
 
 Snapshot:
-![Demo interface](fig_streamlit.jpg)
+![Demo interface](fig_streamlit.png)
