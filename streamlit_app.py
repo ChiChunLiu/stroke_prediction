@@ -4,7 +4,6 @@ import streamlit as st
 
 predict_dict = {1: 'have stroke', 0: 'not have stroke'}
 
-
 with open("classifier.pkl","rb") as clf_pkl:
     clf = pickle.load(clf_pkl)
     
@@ -74,19 +73,17 @@ def main():
     result=""
     if st.button("Evaluate stroke status"):
         result = predict_stroke(gender, 
-                   age,
-                   hypertension, 
-                   heart_disease, 
-                   ever_married, 
-                   work_type, 
-                   Residence_type, 
-                   avg_glucose_level, 
-                   bmi, 
-                   smoking_status)
+                                age,
+                                hypertension, 
+                                heart_disease, 
+                                ever_married, 
+                                work_type, 
+                                Residence_type, 
+                                avg_glucose_level, 
+                                bmi, 
+                                smoking_status)
 
-    predict_dict = {1: 'have stroke', 0: 'not have stroke'}
-
-    st.success('Predicted to {}'.format(predict_dict[result[0]]))
+        st.success('Predicted to {}'.format(predict_dict[result[0]]))
     
     if st.button("About"):
         st.text("stroke prediction with an ensemble ML model")
